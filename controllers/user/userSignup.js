@@ -17,7 +17,7 @@ async function CreateUser(req,res) {
             console.log(saveUserResponse)
 
         // Text for user account activation link
-        const textMsaageForAccountVerification = `Hey! ${saveUserResponse.name}, Your xCloud account verification link is : \n https://xcloud-server.onrender.com/auth/verified/${saveUserResponse._id}.\n Click on this link to verify your account instantly.`
+        const textMsaageForAccountVerification = `Hey! ${saveUserResponse.name}, Your xCloud account verification link is : \n https://xcloud-server.onrender.com/auth/verified/akash-dev/${saveUserResponse._id}.\n Click on this link to verify your account instantly.`
 
         // Sending account activation link via mail
         sendAccountVerificationMail(saveUserResponse.email,textMsaageForAccountVerification,"Account activation link has been sent successfully")
